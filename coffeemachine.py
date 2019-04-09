@@ -27,16 +27,16 @@ def addWater(waterin, capsulein, powerOn):
 
 
 def insertCapsule(waterin, capsulein, powerOn):
-    if powerOn:
-        if capsulein == True:
-            print("machine already has a capsule in")
-        else:
-            if waterin == True: 
-                print("Adding capsule...Capsule and water in. Ready to brew")
-            elif capsulein == False:
-                print("Adding Capsule...Capsule in. Add water to brew")
+    # if powerOn:
+    if capsulein == True:
+        print("machine already has a capsule in")
     else:
-        print("--doing nothing because power is off--\n")
+        if waterin == True: 
+            print("Adding capsule...Capsule and water in. Ready to brew")
+        elif capsulein == False:
+            print("Adding Capsule...Capsule in. Add water to brew")
+    # else:
+    #     print("--doing nothing because power is off--\n")
     waterin = True
     return waterin
 
