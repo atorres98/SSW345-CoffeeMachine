@@ -12,31 +12,31 @@ def pressPower(powerOn):
     
 
 def addWater(waterin, capsulein, powerOn):
-    if powerOn:
-        if waterin == True:
-            print("machine already has water")
-        else:
-            if capsulein == True: 
-                print("Adding water...Capsule and water in. Ready to brew")
-            elif capsulein == False:
-                print("Adding water...Water in. Insert capsule to brew")
+    # if powerOn:
+    if waterin == True:
+        print("machine already has water")
     else:
-        print("--doing nothing because power is off--\n")
+        if capsulein == True: 
+            print("Adding water...Capsule and water in. Ready to brew")
+        elif capsulein == False:
+            print("Adding water...Water in. Insert capsule to brew")
+    # else:
+    #     print("--doing nothing because power is off--\n")
     waterin = True
     return waterin
 
 
 def insertCapsule(waterin, capsulein, powerOn):
-    if powerOn:
-        if capsulein == True:
-            print("machine already has a capsule in")
-        else:
-            if waterin == True: 
-                print("Adding capsule...Capsule and water in. Ready to brew")
-            elif capsulein == False:
-                print("Adding Capsule...Capsule in. Add water to brew")
+    # if powerOn:
+    if capsulein == True:
+        print("machine already has a capsule in")
     else:
-        print("--doing nothing because power is off--\n")
+        if waterin == True: 
+            print("Adding capsule...Capsule and water in. Ready to brew")
+        elif capsulein == False:
+            print("Adding Capsule...Capsule in. Add water to brew")
+    # else:
+    #     print("--doing nothing because power is off--\n")
     waterin = True
     return waterin
 
@@ -44,7 +44,10 @@ def insertCapsule(waterin, capsulein, powerOn):
 def pressBrew(waterin, capsulein, powerOn):
     if powerOn:    
         if waterin and capsulein:
-            print("brewing in progress")
+            print("brewing in progress \n . \n . \n . \n . \n ")
+            wait30()
+            print("Cup is ready")
+            wait300()
         elif waterin:
             print("insert capsule first")
         elif capsulein:
@@ -55,7 +58,7 @@ def pressBrew(waterin, capsulein, powerOn):
         print("--doing nothing because power is off--\n")
 
 def wait30():
-    print("you are waiting for the brewing to finish")
+    print("you are waiting 30s for the brewing to finish")
 
 def wait300():
     print("300 second time (5min) to turn off coffee maker")
